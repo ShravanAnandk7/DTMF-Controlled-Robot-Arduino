@@ -1,0 +1,142 @@
+
+void decodekeynew()
+{
+  if(D1==0)
+  { 
+    if(D2==0)
+    {   
+      if(D3==0)
+      {         
+                  if(D4==0)
+                  {    
+                  key='0';      // 0 0 0 0
+                  }
+                  else
+                  {
+                  key='8';      // 0 0 0 1
+                  back();
+                  }
+      }
+        else
+        {
+          
+                  if(D4==0)
+                  {    
+                  key='4';       // 0 0 1 0  
+                    spdl=0;
+                  spdr=spd;
+                  rspd=0;
+                  lspd=spd;
+                 calibrate();                 
+           
+                  }
+                  else
+                  {
+                  key='#';       // 0 0 1 1
+                  }
+         }
+      }
+      else
+      {
+        if(D3==0)
+      {         
+                  if(D4==0)     // 0 1 0 0
+                  {    
+                  key='2';
+                  straight();
+                  }
+                  else
+                  {
+                  key='0';      // 0 1 0 1
+                  }
+      }
+        else
+        {
+          
+                  if(D4==0)
+                  {    
+                  key='6';        // 0 1 1 0
+                  spdl=spd;
+                  spdr=0;
+                  rspd=spd;
+                  lspd=0;
+                 calibrate();                 
+                  
+                  }
+                  else
+                  {
+                  key= 'B' ;      // 0 1 1 1            
+                  }
+         }
+      }
+     
+  }
+  else
+  { 
+    if(D2==0)
+    {
+     
+      if(D3==0)
+      {         
+                  if(D4==0)
+                  {    
+                  key='1';        // 1 0 0 0
+                 spdl=0;
+                  spdr=spd;
+                  rspd=0;
+                  lspd=0;
+                 calibrate();                 
+                  
+                  }
+                  else
+                  {
+                  key='9';        // 1 0 0 1
+                  }
+      }
+        else
+        {
+          
+                  if(D4==0)
+                  {    
+                  key='5';          // 1 0 1 0
+                  sstop();
+                  }
+                  else
+                  {
+                  key='A';         // 1 0 1 1
+                  }
+         }
+      }
+      else
+      {
+        if(D3==0)
+      {         
+                  if(D4==0)
+                  {    
+                  key='3';        // 1 1 0 0
+                  spdl=spd;
+                  spdr=0;
+                  rspd=0;
+                  lspd=0;
+                 calibrate();
+                  }
+                  else
+                  {
+                  key='*';         // 1 1 0 1
+                  }
+      }
+        else
+        {
+          
+                  if(D4==0)
+                  {    
+                  key='7';        // 1 1 1 0
+                  }
+                  else
+                  {
+                  key='C';       // 1 1 1 1           
+                  }
+         }
+      }  
+      }
+      }      
